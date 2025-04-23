@@ -1,0 +1,10 @@
+<h1>Bolsas Disponíveis</h1>
+<ul>
+  {% for bolsa in bolsas %}
+    <li>
+      <strong>{{ bolsa.curso }}</strong> - {{ bolsa.universidade.nome }}<br>
+      De R$ {{ bolsa.valor_original }} por R$ {{ bolsa.valor_com_bolsa }}<br>
+      <a href="{{ bolsa.link_inscricao }}" target="_blank">Inscreva-se</a>
+    </li>
+  {% endfor %}
+</ul>
